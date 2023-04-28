@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 풀기</title>
+    <script>
+        function fn_int(){
+            return Math.floor(Math.random() * 9) + 1; // 1 ~ 9 랜덤 숫자
+        }
+        // for(let i = 0; i < 100; i++){
+        //     console.log(fn_int());
+        // }
+        // console.log("=============================");
+        // console.log( '2 * 10 은 :', eval('2 * 10'));
+        // console.log( fn_int() + "*" + fn_int());
+        /*
+            구구단 연습기를 만들어 주세요.
+            랜덤 함수를 이용하여
+            랜덤 구구단 문제 생성 후 사용자에게 퀴즈 (5판)
+            5판 이후 (어떤 문제) 맞추고 (어떤 문제) 틀렸는지 출력
+        */
+       let count = 0;
+       let x = 0;
+        for(let i = 0; i < 5; i++){
+            // console.log( fn_int() + "*" + fn_int());
+            let left = fn_int();
+            let right = fn_int();
+            let input = prompt(left + "*" + right);
+            input = parseInt(input);
+            if(input == left * right){
+                document.write(left + "*" + right + "문제 정답" + left*right +"<br>");
+                count++;
+            } else {
+                document.write(left + "*" + right + "문제 오답" + input + "정답: " + left*right + "<br>");
+                x++;
+            }
+        }document.write("총 5문제 중 정답 수: " + count + ", 오답 수: " + x);
+    </script>
+</head>
+<body>
+</body>
+</html>

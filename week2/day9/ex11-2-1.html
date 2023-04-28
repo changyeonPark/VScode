@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 그리기</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            margin: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body></body>
+<canvas id="myCanvas" width="420px" height="420px" style="background-color: red; margin: 20px;"></canvas>
+<button onclick="fn_draw()">그려</button>
+<script>
+    let w = 400;
+    let h = 400;
+    let p = 10;
+    let canvas = document.getElementById('myCanvas');
+    let context = canvas.getContext('2d');
+    function fn_draw() {
+        for (let i = 10; i < 420; i += 40) {
+            context.moveTo(i + 0.5, p);
+            context.lineTo(i + 0.5, 410);
+            context.strokeStyle = 'black';
+        }
+        for (let k = 10; k < 420; k += 40) {
+            context.moveTo(p + 0.5, k);
+            context.lineTo(410, k);
+            context.strokeStyle = 'black';
+        }
+
+        context.stroke();
+    }
+    let mouseFunc = function(e){
+        let x = e.clientX;
+        let y = e.clientY;
+        console.log(x, y);        
+    }
+    document.addEventListener('click', mouseFunc);
+</script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="oracle제목없음" id="C1DACAD2-C1C0-3F8F-B701-58A2C4BA45FF" version="3.5">
+<createdBy>pc03</createdBy>
+<createdTime>2023-03-24 07:38:16 UTC</createdTime>
+<ownerDesignName>oracle제목없음</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>C1DACAD2-C1C0-3F8F-B701-58A2C4BA45FF</designId>
+</OSDM_Design>

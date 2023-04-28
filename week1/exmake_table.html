@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 그리기</title>
+</head>
+<body>
+    <h3>테이블 그리기</h3>
+    <hr>
+    <script>
+        // 입력받은 수 만큼 행과 열을 가진 테이블을 그리시오.
+        let num = prompt("몇 칸으로 그려드릴까요?", 5);
+        num = parseInt(num); // string to int
+        document.write("<h2>" + num + "x" + num + "</h2>");
+        document.write("<table border='1'>");
+        document.write("<tbody>");
+            // tr 과 td 그리기
+            for(let i = 1; i <= num; i++){
+                document.write("<tr>")
+                for(let k = 1; k <= num; k++){
+                    document.write("<td>" + i + "행" + k + "열</td>");        
+                }document.write("</tr>")
+            }
+        document.write("</tbody>");
+        document.write("</table>");
+    </script>
+    <script>
+        let number = prompt("몇행을 그릴까요?")
+        let colnum = prompt("몇열을 그릴까요?")
+        number = parseInt(number);
+        colnum = parseInt(colnum);
+        document.write("<h3>" + number + "x" + colnum + "</h3>");
+        document.write("<table border='1'>");
+        document.write("<tbody>");
+            for(let i = 1; i <= number; i++){
+                document.write("<tr>")
+                for(let k = 1; k <= colnum; k++){
+                    document.write("<td>" + i + "행" + k + "열</td>");
+                }document.write("</tr>")
+            }
+        document.write("</tbody>");
+        document.write("</table>");
+    </script>
+</body>
+</html>
